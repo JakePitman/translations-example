@@ -4,14 +4,17 @@ import { initReactI18next, useTranslation, Trans } from "react-i18next";
 
 const translationsEn = {
   welcome: "Welcome.",
-  boldItalic: "Make me <bold><italics>bold and italic<italics/></bold>.",
+  bold: {
+    italic: "Make me <bold><italics>bold and italic<italics/></bold>.",
+  },
   changed: "You have changed languages {{count}} times.",
   changed_one: "You have changed languages {{count}} time.",
 };
 const translationsJa = {
   welcome: "ようこそ。",
-  boldItalic:
-    "俺を<bold><italics>ボールドとイタリック</italics></bold>にしろ。",
+  bold: {
+    italic: "俺を<bold><italics>ボールドとイタリック</italics></bold>にしろ。",
+  },
   changed: "あんたが{{count}}回言語を変えた。",
 };
 
@@ -41,7 +44,7 @@ export const MyComponent = () => {
 
         <p className="pb-2 text-sky-300">
           <Trans components={{ bold: <strong />, italics: <em /> }}>
-            boldItalic
+            bold.italic
           </Trans>
         </p>
 
